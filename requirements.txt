@@ -1,33 +1,24 @@
 # requirements.txt
 
-# ============ Web框架 ============
 streamlit>=1.28.0
-
-# ============ 数据处理 ============
 pandas>=2.0.0
 numpy>=1.24.0
-openpyxl>=3.1.0
-
-# ============ 科学计算 ============
-scipy>=1.11.0              # ← 添加这个！
-
-# ============ 地理空间处理 ============
+scipy>=1.11.0
 geopandas>=0.14.0
 shapely>=2.0.0
 pyproj>=3.6.0
 fiona>=1.9.0
-rtree>=1.0.0
-
-# ============ OSM数据获取 ============
+plotly>=5.18.0
 osmnx>=1.9.0
 networkx>=3.0
-
-# ============ 可视化 ============
-plotly>=5.18.0
-matplotlib>=3.7.0          # 可能需要
-
-# ============ 其他 ============
 lxml>=4.9.0
 tqdm>=4.66.0
-pyyaml>=6.0
-requests>=2.31.0
+rtree>=1.0.0
+
+# 尝试安装 PopulationSim（可能失败）
+populationsim
+activitysim
+
+# 或者指定版本
+# populationsim>=0.5.1
+# activitysim>=1.2.0

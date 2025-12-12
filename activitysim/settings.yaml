@@ -1,0 +1,42 @@
+inherit_settings: true
+households_sample_size: 0
+chunk_size: 0
+num_processes: 1
+input_table_list:
+- tablename: households
+  filename: households.csv
+  index_col: household_id
+- tablename: persons
+  filename: persons.csv
+  index_col: person_id
+- tablename: land_use
+  filename: land_use.csv
+  index_col: zone_id
+skims_file: skims.omx
+logging_config_file: logging.yaml
+output_tables:
+  action: include
+  tables:
+  - households
+  - persons
+  - tours
+  - trips
+models:
+- initialize_landuse
+- initialize_households
+- school_location
+- workplace_location
+- auto_ownership_simulate
+- cdap_simulate
+- mandatory_tour_frequency
+- mandatory_tour_scheduling
+- non_mandatory_tour_frequency
+- non_mandatory_tour_destination
+- non_mandatory_tour_scheduling
+- tour_mode_choice_simulate
+- stop_frequency
+- trip_purpose
+- trip_destination
+- trip_scheduling
+- trip_mode_choice
+- write_tables

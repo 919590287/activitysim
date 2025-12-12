@@ -1,0 +1,10 @@
+REGION:
+- control_field: num_hh_region
+  seed_table: households
+  importance: 10000
+  control_type: simple
+TAZ:
+- control_field: num_hh_taz
+  seed_table: households
+  importance: 1000
+  control_type: simple
